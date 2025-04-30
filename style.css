@@ -1,0 +1,341 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f5f5f5;
+  }
+  
+  body.dark-mode header {
+    background-color: #1f1f1f;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  body:not(.dark-mode) .nav-links li a {
+    color: black;
+  }
+  
+  .nav-links li a:hover {
+    color: #25D366;
+  }
+  
+  #toggle-theme {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #home {
+    background: url('DRYKA.enc') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  #home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  #home h1, #home p {
+    z-index: 2;
+    position: relative;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  #home p {
+    font-size: 1.5rem;
+  }
+  
+  /* Galeria */
+  .galeria-imagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .galeria-imagens img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Formulário */
+  form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+  }
+  
+  body.dark-mode footer {
+    background-color: #1f1f1f;
+  }
+  
+  /* Contatos */
+  .whatsapp-contato, .instagram-contato {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .whatsapp-contato a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-contato a:hover {
+    background-color: #1ebe57;
+  }
+  
+  .instagram-contato a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+  }
+  
+  .instagram-contato a:hover {
+    opacity: 0.8;
+  }
+  
+  .mapa {
+    margin-top: 40px;
+  }
+  
+  /* Dark Mode Extras */
+  body.dark-mode a {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode form input,
+  body.dark-mode form textarea {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode form button {
+    background-color: #f0f0f0;
+    color: #121212;
+  }
+  
+  body.dark-mode form button:hover {
+    background-color: #ddd;
+  }
+  
+  /* WhatsApp Fixed */
+  .whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-fixed a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .whatsapp-fixed a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  
+    .galeria-imagens {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .galeria-imagens img {
+      width: 100%;
+      height: auto;
+    }
+  
+    #informacoes-contato {
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 90%;
+    }
+  
+    form {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .whatsapp-fixed {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .nav-links li a {
+      font-size: 0.9rem;
+    }
+  
+    .whatsapp-fixed a img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: row; /* Mantém os itens na horizontal */
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: row; /* Mantém os links na horizontal */
+      gap: 10px;
+    }
+  
+    .social-icons {
+      margin-top: 0; /* Remove o espaçamento extra */
+    }
+  }
